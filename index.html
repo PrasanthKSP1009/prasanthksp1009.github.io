@@ -34,7 +34,27 @@
 
 		/* Handle on hover */
 		::-webkit-scrollbar-thumb:hover {
-			background: #14AF4A;
+			background: #12e20e;
+		}
+
+		iframe {
+			border: none;
+			width: 100%;
+			height: 100vh;
+		}
+
+		.close {
+			top: 10px;
+			left: 71%;
+			color: #00ff59;
+			width: 50px;
+			height: 50px;
+			font-size: 3rem;
+			cursor: pointer;
+		}
+
+		.view-resume-content {
+			width: 50%;
 		}
 	</style>
 </head>
@@ -59,8 +79,16 @@
 						<li class=nav-item><a class=nav-link href=#achievements>Achievements</a></li>
 						<li class=nav-item><a class=nav-link href=#contact>contact</a></li>
 					</ul>
+					<div id="viewResumeModal" class="modal justify-content-center">
+						<!-- Modal content -->
+						<div class="view-resume-content">
+							<span class="close" style="position: absolute;right: 0;">&times;</span>
+							<iframe src="resume/Prasanth Krupanandam Sivagami SDE Resume.pdf#toolbar=0"></iframe>
+						</div>
+					</div>
+					<button class="btn btn-primary ml-lg-2" id="viewButton">View Resume</button>
 					<a target="blank" href="resume/Prasanth Krupanandam Sivagami SDE Resume.pdf"
-						class="btn btn-primary ml-lg-4">Download Resume</a>
+						class="btn btn-primary ml-lg-2" download>Download Resume</a>
 				</div>
 			</nav>
 		</div>
@@ -457,10 +485,11 @@
 			</div>
 		</div>
 	</footer>
+	<script src="./modal.js"></script>
 	<script src=plugins/jQuery/jquery.min.js>
 	</script>
 	<script src=plugins/bootstrap/bootstrap.min.js>
-	</script>
+	</script>  ̰
 	<script src=plugins/particles/particles.min.js>
 	</script>
 	<script src=plugins/particles/stats.min.js>
